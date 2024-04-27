@@ -19,7 +19,19 @@ public class ReadProperties {
         return properties.getProperty("url");
     }
 
-    public static String getPhoneNumber() {
+    public static int timeout() {
+        return Integer.parseInt(properties.getProperty("timeout"));
+    }
+
+    public static String phoneNumber() {
         return properties.getProperty("phoneNumber");
+    }
+
+    public static String sum() {
+        return properties.getProperty("sum");
+    }
+
+    public static String email() {
+        return properties.getProperty("email");
     }
 }
