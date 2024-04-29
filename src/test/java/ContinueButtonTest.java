@@ -2,13 +2,12 @@ import configurator.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ContinueButtonTest extends BaseTest {
 
     @Test
-    public void continueButtonTest() throws InterruptedException {
+    public void continueButtonTest() {
         WebElement serviceSelector = waitService.waitForExists(By.id("pay"));
         Select service = new Select(serviceSelector);
         service.selectByValue("Услуги связи");
@@ -25,6 +24,6 @@ public class ContinueButtonTest extends BaseTest {
         WebElement continueButton = waitService.waitForElementClickable(By.xpath("//form[@id='pay-connection']/button"));
         continueButton.submit();
 
-        Thread.sleep(2000);
+        WebElement CheckWindow = waitService.waitForVisibilityLocatedBy(By.xpath("//iframe[@class='bepaid-iframe']"));
     }
 }
