@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class WaitService {
     private WebDriver driver;
@@ -30,5 +31,9 @@ public class WaitService {
 
     public WebElement waitForElementClickable(By by) {  //кликабелен
         return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public List<WebElement> waitForAllExistElementsLocatedBy(By locator) {
+        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
     }
 }

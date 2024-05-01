@@ -34,4 +34,8 @@ public class ReadProperties {
     public static String email() {
         return properties.getProperty("email");
     }
+
+    public static String browserName(){
+        return properties.getProperty("browser");
+    }
 }
