@@ -3,8 +3,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class HomeInternetTest extends BaseTest {
+
     @Test
     public void homeInternetTest() {
         WebElement homeInternet = waitService.waitForElementClickable(By.xpath("//ul[@class='select__list']//li[2]"));
