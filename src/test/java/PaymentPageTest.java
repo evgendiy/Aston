@@ -9,7 +9,7 @@ import java.util.List;
 
 public class PaymentPageTest extends BaseTest {
     @Test
-    public void paymentPageTest() throws InterruptedException {
+    public void paymentPageTest(){
         WebElement communicationService = waitService.waitForElementClickable(By.xpath("//ul[@class='select__list']//li[1]"));
         communicationService.click();
 
