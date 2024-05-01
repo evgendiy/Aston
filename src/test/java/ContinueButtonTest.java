@@ -24,6 +24,7 @@ public class ContinueButtonTest extends BaseTest {
         WebElement continueButton = waitService.waitForElementClickable(By.xpath("//form[@id='pay-connection']/button"));
         continueButton.submit();
 
-        WebElement CheckWindow = waitService.waitForVisibilityLocatedBy(By.xpath("//iframe[@class='bepaid-iframe']"));
+        WebElement checkWindow = waitService.waitForVisibilityLocatedBy(By.xpath("//iframe[@class='bepaid-iframe']"));
+        checkWindow.isDisplayed();
     }
 }
