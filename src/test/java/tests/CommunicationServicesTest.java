@@ -1,3 +1,7 @@
+package tests;
+
+import baaseEntities.BaseTest;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -5,7 +9,8 @@ import org.testng.annotations.Test;
 
 public class CommunicationServicesTest extends BaseTest {
 
-    @Test
+    @Test(description = "Тест вкладки услуги связи")
+    @Description("Проверяем незаполненные поля вкладки услуги связи")
     public void communicationServicesTest(){
         WebElement communicationService = waitService.waitForElementClickable(By.xpath("//ul[@class='select__list']//li[1]"));
         communicationService.click();

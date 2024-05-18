@@ -1,3 +1,7 @@
+package tests;
+
+import baaseEntities.BaseTest;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -5,7 +9,8 @@ import org.testng.annotations.Test;
 
 public class HomeInternetTest extends BaseTest {
 
-    @Test
+    @Test(description = "Тест вкладки домашний интернет")
+    @Description("Проверяем незаполненные поля вкладки домашний интернет")
     public void homeInternetTest() {
         WebElement homeInternet = waitService.waitForElementClickable(By.xpath("//ul[@class='select__list']//li[2]"));
         homeInternet.click();

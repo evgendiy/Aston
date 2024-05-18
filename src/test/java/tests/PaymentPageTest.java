@@ -1,4 +1,8 @@
+package tests;
+
+import baaseEntities.BaseTest;
 import configurator.ReadProperties;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -8,7 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentPageTest extends BaseTest {
-    @Test
+    @Test(description = "Тест оплаты услуг связи")
+    @Description("Проверяем вкладку услуги связи с заполнением всех полей")
     public void paymentPageTest(){
         WebElement communicationService = waitService.waitForElementClickable(By.xpath("//ul[@class='select__list']//li[1]"));
         communicationService.click();

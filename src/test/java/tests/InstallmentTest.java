@@ -1,11 +1,16 @@
+package tests;
+
+import baaseEntities.BaseTest;
+import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class InstallmentTest extends BaseTest{
+public class InstallmentTest extends BaseTest {
 
-    @Test
+    @Test(description = "Тест вкладки рассрочка")
+    @Description("Проверяем незаполненные поля вкладки рассрочка")
     public void installmentTest(){
         WebElement installment = waitService.waitForElementClickable(By.xpath("//p[text() = 'Рассрочка']"));
         installment.click();
